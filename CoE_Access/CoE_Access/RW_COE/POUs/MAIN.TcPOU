@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.9">
+  <POU Name="MAIN" Id="{f7d52a2f-0c79-4c7d-846f-31149e62871c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+   fb_coe_write          : FB_EcCoESdoWrite; // Function Block for writing in CoE
+   fb_coe_read           : FB_EcCoESdoRead;  // Function Block for reading from CoE
+   userNetId             : T_AmsNetId := 'a.b.c.d.4.1'; // Have to be entered
+   userSlaveAddr         : UINT := 1002;     // Have to be entered
+   startWrite            : BOOL := FALSE;    // Sign for start writing
+   startRead             : BOOL := FALSE;    // Sign for start reading
+   nState                : BYTE := 0;        // RW-status
+   // Example: Read EL3751 PAI Internal Data: Temperature Value
+   int16Buffer           : INT;              // Buffer for reading
+   // Example: Select EL3751 Filter1: 22 = IIR Butterw. LP 5th Ord. 1000 Hz:
+   uint16Buffer          : UINT:=22;         // Buffer for writing
+   bTxPDOState AT%I*     : BOOL;             // (PDO for synchronization)
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE nState OF
+0:
+   IF startWrite THEN
+      fb_coe_write(bExecute := FALSE);// Prepare CoE-Access: Write an object/ sub index
+      nState := 1;// Next state for writing
+      startWrite := FALSE;
+   END_IF
+   IF startRead THEN
+      fb_coe_read(bExecute := FALSE);// Prepare CoE-Access: Read an object/ sub index
+      nState := 11;// Next state for reading
+      startRead := FALSE;
+   END_IF
+// ============== COE WRITE ================
+1:
+   // Write entry
+   fb_coe_write(
+   sNetId:= userNetId,
+   nSlaveAddr:= userSlaveAddr,
+   nSubIndex:= 16#16,
+   nIndex:= 16#8000,
+   pSrcBuf:= ADR(uint16Buffer),
+   cbBufLen:= 2,
+   bExecute:= TRUE,
+   tTimeout:= T#1S
+   );
+   nState := nState + 1; // Next state
+2:
+   fb_coe_write();       // Execute CoE write until done
+   IF fb_coe_write.bError THEN
+      nState := 100;     // Error case
+   ELSE
+      IF NOT fb_coe_write.bBusy THEN
+         nState := 0;    // Done
+      END_IF
+   END_IF
+// ============== COE READ =================
+11:
+   // Read entry
+   fb_coe_read(
+   sNetId:= userNetId, 
+   nSlaveAddr:= userSlaveAddr, 
+   nSubIndex:= 1, 
+   nIndex:= 16#9000,
+   pDstBuf:= ADR(int16Buffer), 
+   cbBufLen:= 2, 
+   bExecute:= TRUE, 
+   tTimeout:= T#1S
+   );
+
+   nState := nState + 1; // Next state
+12:
+   fb_coe_read();        // Execute CoE read until done
+   IF fb_coe_read.bError THEN
+      nState := 100;     // Error case
+   ELSE
+      IF NOT fb_coe_read.bBusy THEN
+         nState := 0;    // Done
+      END_IF
+   END_IF
+   100:
+   ;                     // Access error
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="14" Count="0" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="138" Count="9" />
+      <LineId Id="150" Count="0" />
+      <LineId Id="72" Count="13" />
+      <LineId Id="87" Count="4" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="100" Count="2" />
+      <LineId Id="108" Count="1" />
+      <LineId Id="152" Count="8" />
+      <LineId Id="164" Count="0" />
+      <LineId Id="119" Count="2" />
+      <LineId Id="123" Count="4" />
+      <LineId Id="134" Count="0" />
+      <LineId Id="136" Count="1" />
+      <LineId Id="49" Count="1" />
+      <LineId Id="53" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
