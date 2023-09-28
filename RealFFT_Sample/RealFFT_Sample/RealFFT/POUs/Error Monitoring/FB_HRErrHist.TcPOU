@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="FB_HRErrHist" Id="{13dd99e4-0dfe-493f-a13d-ce2e0387ba70}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_HRErrHist
+(* v1.10
+build up an error history consisting of two arrays and one index.
+The index shows the actual array position. The last error id and the count for this id are saved in the arrays.
+If an error id is the same as the previous input error the counter is increased. Otherwise the index is increased.
+*)
+VAR_INPUT
+	bEdgeDetect	: BOOL;	(* FALSE: every input(bErr) is processed; TRUE: only rising edge of input is processed *)
+END_VAR
+VAR_OUTPUT
+	nErrSum		: UINT;
+	nErrIdx		: UINT; // error list index of last occured error (max. cHistLen)
+	aErrList	: ARRAY[1..cHistLen] OF ST_HRErrHist;
+END_VAR
+
+VAR
+	bNewErr		: BOOL;
+	fbErrTrig	: R_TRIG;
+END_VAR
+VAR CONSTANT
+	cHistLen	: UINT := 100;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="AddError" Id="{3dd500b8-1225-4214-9779-654309748312}">
+      <Declaration><![CDATA[METHOD AddError
+VAR_INPUT
+	bErr		: BOOL;
+	hrErrCode	: HRESULT;
+	sErrSource	: STRING(63);
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[fbErrTrig(CLK:=bErr);
+IF bEdgeDetect THEN
+	bNewErr := fbErrTrig.Q;
+ELSE
+	bNewErr := bErr;
+END_IF
+
+IF bNewErr THEN
+	nErrSum := nErrSum + 1;
+	IF nErrIdx < cHistLen THEN
+		IF nErrIdx = 0 THEN
+			nErrIdx	:= nErrIdx + 1;
+		ELSIF aErrList[nErrIdx].hrErrCode <> hrErrCode OR aErrList[nErrIdx].sErrSource <> sErrSource THEN
+			nErrIdx	:= nErrIdx + 1;
+		END_IF
+		aErrList[nErrIdx].hrErrCode := hrErrCode;
+		aErrList[nErrIdx].sErrSource := sErrSource;
+		aErrList[nErrIdx].nErrCount := aErrList[nErrIdx].nErrCount + 1;
+	END_IF
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="{ce39411f-0156-4af2-b1ba-49d3b754a640}">
+      <Declaration><![CDATA[METHOD Reset
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[nErrSum := 0;
+nErrIdx := 0;
+MEMSET(ADR(aErrList),0,SIZEOF(aErrList));]]></ST>
+      </Implementation>
+    </Method>
+    <ObjectProperties>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="POUImageProperty">
+            <n n="ImageData" />
+            <v n="TransparencyColor">"White"</v>
+            <v n="MakeTransparent">false</v>
+          </o>
+        </Data>
+        <TypeList>
+          <Type n="Boolean">System.Boolean</Type>
+          <Type n="POUImageProperty">{bb741845-1ec5-4be9-bb0d-2cf7058af574}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
+    </ObjectProperties>
+    <LineIds Name="FB_HRErrHist">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_HRErrHist.AddError">
+      <LineId Id="3" Count="19" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_HRErrHist.Reset">
+      <LineId Id="3" Count="1" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

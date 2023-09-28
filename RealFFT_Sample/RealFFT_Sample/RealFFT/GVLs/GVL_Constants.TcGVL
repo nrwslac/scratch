@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <GVL Name="GVL_Constants" Id="{fc85544f-8c4b-4c9f-8316-ddb86efa8b8c}">
+    <Declaration><![CDATA[VAR_GLOBAL CONSTANT
+	
+	cOversamples 	: UDINT 	:= 10;				 // number of oversamples
+	cFFTLength		: UDINT		:= 2048;			 // length of FFT 
+	cBufferLength	: UDINT		:= cFFTLength;	     // attention: needs to be equal to cFFTLength (no overlap)	
+	cFFTResult 		: UDINT 	:= cFFTLength/2+1;	 // result of mag. spectrum - cFFTLength/2+1
+		
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

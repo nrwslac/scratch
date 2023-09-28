@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="MAIN" Id="{69af3e24-9f4a-4549-a15e-22c32d8c7cae}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+
+VAR CONSTANT
+    cInitSource			: ST_MA_MultiArray_InitPars 
+							:= ( eTypeCode := eMA_TypeCode_LREAL, nDims := 1, aDimSizes := [cBufferLength]);	
+END_VAR
+
+VAR
+	(* Input *)
+	nInputSelection		: UDINT := 1;						// Switch between hardware and function generator	
+	nSample				: UDINT;                            
+	aEl3632 AT %I*		: ARRAY[1..cOversamples] OF INT;	// Input from hardware e.g. EL3632
+	
+	(* Signal Generator *)
+	fbFunctionGenerator	: FB_FunctionGenerator;
+	fSetFrequency		: LREAL := 200;		// Hz
+	fSetAmplitude		: LREAL := 13;		// peak amplitude of sin signal, in Volts		
+    fDC					: LREAL := 7;       // Amplitude of DC	
+	
+	(* Source buffers *)	
+	aBuffer				: ARRAY[1..cOversamples] OF LREAL;				// local varibale -> to source				
+	fbSource			: FB_CMA_Source :=(	stInitPars := cInitSource, 
+											nOwnID := eID_Source, 
+											aDestIDs := [eID_FFT]);		// Initialize source buffers
+	(* Result buffers *)										
+	aSpectrumResult		: ARRAY[1..cFFTResult] OF LCOMPLEX;				// local result variable <- from sink
+    fbSink				: FB_CMA_Sink := (nOwnID := eID_Sink);			// Initialize sink buffers
+	
+	
+	(* post-processing of fft *)
+	nCountResults		: ULINT;							// increments for every fft calculation
+	bCalculate			: BOOL;								// true if fft calculation ready	
+	SpectrumAbs         : ARRAY[1..cFFTResult] OF LREAL; 	// magnitude spectrum variable 
+	(* max amplitude calculation *)
+	fMaxAmpl			: LREAL;
+	nIdxOfMaxAmpl		: UDINT;							// index of max amplitude in spectrum result array 
+	(* frequency calculation *)
+	fSampleTaskCycleTime: LREAL := 1; // ms
+	fSampleRate			: LREAL;      // Hz  ( sample rate = oversampling factor / cycle time )
+	fResolution			: LREAL;      // Hz/Idx
+	fFrequency			: LREAL;      // Hz	
+	
+	(* error monitoring *)
+	fbErrHist			: FB_HRErrHist;
+
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(* Input *) 
+CASE nInputSelection OF
+	0:  (* input from EL3632 *)
+		FOR nSample := 1 TO cOversamples DO
+			aBuffer[nSample] := INT_TO_LREAL(aEl3632[nSample]);
+		END_FOR
+	1:  (* signal generator *)		
+		fbFunctionGenerator(	fFrequency 	:= fSetFrequency,
+								fAmplitude 	:= fSetAmplitude,
+								eFunction 	:= E_FunctionType.Sine,
+								aSignal		:= aBuffer );		
+        // add DC to signal
+		FOR nSample := 1 TO cOversamples DO
+			aBuffer[nSample] := fDC+aBuffer[nSample];
+		END_FOR								
+END_CASE					
+
+(* Call source to collect data *)
+fbSource.Input1D( pDataIn 			:= ADR(aBuffer),
+				  nDataInSize 		:= SIZEOF(aBuffer), 
+				  eElementType 		:= eMA_TypeCode_LREAL,
+				  nWorkDim 			:= 0,
+				  pStartIndex		:= 0,
+				  nOptionPars		:= cCMA_Option_MarkInterruption ); 
+IF fbSource.bError THEN
+	fbErrHist.AddError(bErr:=TRUE, hrErrCode:=fbSource.hrErrorCode, sErrSource:='MAIN.fbSource'); // error monitoring
+	// ToDo: if error
+END_IF
+
+
+(* Push results to sink *)
+fbSink.Output1D(	pDataOut 		:= ADR(aSpectrumResult), 
+					nDataOutSize 	:= SIZEOF(aSpectrumResult), 
+					eElementType 	:= eMA_TypeCode_LCOMPLEX, 
+					nWorkDim 		:= 0,
+					nElements		:= 0,
+					pStartIndex 	:= 0,
+					nOptionPars		:= 0,
+					bNewResult		=> bCalculate );
+IF fbSink.bError THEN
+	fbErrHist.AddError(bErr:=TRUE, hrErrCode:=fbSink.hrErrorCode, sErrSource:='MAIN.fbSink'); // error monitoring
+	// ToDo: if error
+END_IF
+
+(* post-process fft result *)
+IF bCalculate THEN
+	nCountResults := fbSink.nCntResults;
+	
+	// Calculate absolute value as aSpectrumResult is of complex type
+	FOR nSample := 1 TO cFFTResult DO			   	   
+	   SpectrumAbs[nSample] := SQRT(aSpectrumResult[nSample].re * aSpectrumResult[nSample].re + aSpectrumResult[nSample].im * aSpectrumResult[nSample].im);
+       
+	   // scale spectrum
+	   IF nSample = 1 THEN
+		   SpectrumAbs[nSample] := SpectrumAbs[nSample]/cFFTLength;   // scale DC value
+	   ELSE
+		   SpectrumAbs[nSample] := 2*SpectrumAbs[nSample]/cFFTLength; // scale frequencies not equal to 0
+	   END_IF
+	   
+	   
+	END_FOR;
+	
+	IF NOT lrealisnan(SpectrumAbs[1]) THEN
+		// Calculate max amplitude in spectrum
+		fMaxAmpl := 0;
+		FOR nSample:=1 TO cFFTResult DO
+			IF SpectrumAbs[nSample] > fMaxAmpl THEN
+				fMaxAmpl := SpectrumAbs[nSample];
+				nIdxOfMaxAmpl := nSample;
+			END_IF
+		END_FOR
+		
+		// Calculate frequency for max amplitude [ frequency = index * (sample rate / FFT length) ]
+		fSampleRate := cOversamples * (1000.0 / fSampleTaskCycleTime);
+		fResolution := fSampleRate / cFFTLength;
+		fFrequency := (nIdxOfMaxAmpl-1) * fResolution;	 // -1 to consider DC = 0*fResolution
+	END_IF
+
+	
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="3" Count="62" />
+      <LineId Id="67" Count="15" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

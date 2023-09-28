@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <DUT Name="E_FunctionType" Id="{2d403bde-50d0-45d5-b9c5-4ef39610dc2b}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+TYPE E_FunctionType :
+(
+	Sine,		// typical for vibrations originating from rotating machine
+	Square,		// mixed sine signals good for analyzing spectrum
+	Pulse,		// mixed sine signals good for analyzing spectrum
+	Triangular,	// mixed sine signals good for analyzing spectrum
+	Sawtooth,	// ramp-type vibrations, continuously increasing
+	AM			// amplitude modulation: typical for vibrations originating from gear-tooth failure or bearing faults
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

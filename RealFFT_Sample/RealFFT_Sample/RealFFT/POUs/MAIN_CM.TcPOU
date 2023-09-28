@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="MAIN_CM" Id="{759a1394-da0e-4072-9e18-bc13374d1129}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN_CM
+VAR CONSTANT										
+	cInitFFT 	: ST_CM_RealFFT_InitPars := (	nFFT_Length := cFFTLength, bForward := TRUE);															
+END_VAR
+
+VAR													
+	fbRealFFT			: FB_CMA_RealFFT :=(	stInitPars := cInitFFT, nOwnID := eID_FFT, aDestIDs := [eID_Sink] );														
+	fbErrHist			: FB_HRErrHist; // error monitoring
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+// Call RealFFT 
+fbRealFFT.Call();
+IF fbRealFFT.bError THEN
+	fbErrHist.AddError(bErr:=TRUE, hrErrCode:=fbRealFFT.hrErrorCode, sErrSource:='MAIN_CM.fbRealFFT'); // error monitoring
+	// ToDo: if error
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN_CM">
+      <LineId Id="3" Count="5" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

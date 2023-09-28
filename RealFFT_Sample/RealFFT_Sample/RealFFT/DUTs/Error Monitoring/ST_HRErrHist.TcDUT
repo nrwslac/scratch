@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <DUT Name="ST_HRErrHist" Id="{92d421d1-d14f-450b-983f-70e2be9df404}">
+    <Declaration><![CDATA[TYPE ST_HRErrHist :
+STRUCT
+{attribute 'displaymode':='hex'}
+	hrErrCode	: HRESULT;
+	sErrSource	: STRING(63);
+	nErrCount	: UDINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
