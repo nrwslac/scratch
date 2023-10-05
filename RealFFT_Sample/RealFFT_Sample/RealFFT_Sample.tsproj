@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.7">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35">
 	<DataTypes>
 		<DataType>
-			<Name GUID="{63601129-3DB8-1D24-9501-F769206256E6}" IecBaseType="true" AutoDeleteType="true">ARRAY [1..10] OF INT</Name>
+			<Name GUID="{3F5C5447-68BB-C561-3B28-81407DA132AE}" IecBaseType="true" AutoDeleteType="true">ARRAY [1..10] OF INT</Name>
 			<BitSize>160</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
 			<ArrayInfo>
@@ -61,7 +61,7 @@
 			</Hides>
 		</DataType>
 	</DataTypes>
-	<Project ProjectGUID="{CF47CE43-24EA-4B7A-9559-35E753A65549}" Target64Bit="true" AutoPrioManagement="true" ShowHideConfigurations="#x106">
+	<Project ProjectGUID="{CF47CE43-24EA-4B7A-9559-35E753A65549}" TargetNetId="172.21.148.67.1.1" AutoPrioManagement="true" ShowHideConfigurations="#x106">
 		<System>
 			<Settings>
 				<IoIdleTask Priority="8"/>
@@ -77,7 +77,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{B468FFED-9ADF-414B-966E-C90CABB972D8}" Name="RealFFT" PrjFilePath="RealFFT\RealFFT.plcProj" TmcFilePath="RealFFT\RealFFT.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x0002">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="RealFFT\RealFFT.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="RealFFT\RealFFT.tmc" TmcHash="{AABF8F9A-52EA-BD2C-9644-499F0B6702E9}">
 					<Name>RealFFT Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -85,9 +85,29 @@
 						<Var>
 							<Name>MAIN.aEl3632</Name>
 							<Comment><![CDATA[ Input from hardware e.g. EL3632]]></Comment>
-							<Type GUID="{63601129-3DB8-1D24-9501-F769206256E6}">ARRAY [1..10] OF INT</Type>
+							<Type GUID="{3F5C5447-68BB-C561-3B28-81407DA132AE}">ARRAY [1..10] OF INT</Type>
 						</Var>
 					</Vars>
+					<Contexts>
+						<Context>
+							<Id NeedCalleeCall="true">0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010020</OTCID>
+							</ManualConfig>
+							<Priority>4</Priority>
+							<CycleTime>1000000</CycleTime>
+						</Context>
+						<Context>
+							<Id NeedCalleeCall="true">1</Id>
+							<Name>PlcTaskCM</Name>
+							<ManualConfig>
+								<OTCID>#x02010010</OTCID>
+							</ManualConfig>
+							<Priority>6</Priority>
+							<CycleTime>5000000</CycleTime>
+						</Context>
+					</Contexts>
 					<TaskPouOids>
 						<TaskPouOid Prio="4" OTCID="#x08502001"/>
 						<TaskPouOid Prio="6" OTCID="#x08502002"/>

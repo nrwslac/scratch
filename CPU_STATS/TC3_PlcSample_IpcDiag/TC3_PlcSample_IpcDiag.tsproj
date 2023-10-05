@@ -1,28 +1,38 @@
-<?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.10">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{85DC3E7A-8ADA-435B-9479-25573909A7DB}" Namespace="AX5000" TcBaseType="true">E_AX5000_P_0275_ActiveFeedbackAndMemory</Name>
 			<BitSize>8</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
 			<EnumInfo>
-				<Text><![CDATA[EAX5000_P_0275_MEMORY_NONE]]></Text>
+				<Text>
+					<![CDATA[EAX5000_P_0275_MEMORY_NONE]]>
+				</Text>
 				<Enum>0</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text><![CDATA[EAX5000_P_0275_FEEDBACK1_MEMORY_ENCODER]]></Text>
+				<Text>
+					<![CDATA[EAX5000_P_0275_FEEDBACK1_MEMORY_ENCODER]]>
+				</Text>
 				<Enum>1</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text><![CDATA[EAX5000_P_0275_FEEDBACK1_MEMORY_DRIVE]]></Text>
+				<Text>
+					<![CDATA[EAX5000_P_0275_FEEDBACK1_MEMORY_DRIVE]]>
+				</Text>
 				<Enum>2</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text><![CDATA[EAX5000_P_0275_FEEDBACK2_MEMORY_ENCODER]]></Text>
+				<Text>
+					<![CDATA[EAX5000_P_0275_FEEDBACK2_MEMORY_ENCODER]]>
+				</Text>
 				<Enum>8</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text><![CDATA[EAX5000_P_0275_FEEDBACK2_MEMORY_DRIVE]]></Text>
+				<Text>
+					<![CDATA[EAX5000_P_0275_FEEDBACK2_MEMORY_DRIVE]]>
+				</Text>
 				<Enum>16</Enum>
 			</EnumInfo>
 			<Hides>
@@ -52,7 +62,7 @@
 			</Hides>
 		</DataType>
 	</DataTypes>
-	<Project ProjectGUID="{FE850BA3-4569-42C6-A169-F6B6B6FD6E6B}" Target64Bit="true" ShowHideConfigurations="#x386">
+	<Project ProjectGUID="{8B08F20B-7D16-4E99-94E8-42906D04ED1F}" TargetNetId="172.21.148.67.1.1" ShowHideConfigurations="#x386">
 		<System>
 			<Tasks>
 				<Task Id="2" Priority="20" CycleTime="100000" AmsPort="350">
@@ -62,20 +72,9 @@
 		</System>
 		<Plc>
 			<Project GUID="{172A103F-8C5B-48B0-97DD-98150A78ACD0}" Name="PlcSample_IpcDiag" PrjFilePath="PlcSample_IpcDiag\PlcSample_IpcDiag.plcproj" TmcFilePath="PlcSample_IpcDiag\PlcSample_IpcDiag.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x0002">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC_IpcDiag_Sample\PLC_IpcDiag_Sample.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PlcSample_IpcDiag\PlcSample_IpcDiag.tmc">
 					<Name>PlcSample_IpcDiag Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
-					<Contexts>
-						<Context>
-							<Id NeedCalleeCall="true">0</Id>
-							<Name>PlcTask</Name>
-							<ManualConfig>
-								<OTCID>#x02010020</OTCID>
-							</ManualConfig>
-							<Priority>20</Priority>
-							<CycleTime>10000000</CycleTime>
-						</Context>
-					</Contexts>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>

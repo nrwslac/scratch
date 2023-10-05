@@ -114,16 +114,16 @@
       <Resolution>Tc2_Utilities, * (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc3_CM">
-      <Resolution>Tc3_CM, * (Beckhoff Automation GmbH)</Resolution>
+      <Resolution>Tc3_CM, 2.0.37.0 (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc3_CM_Base">
-      <Resolution>Tc3_CM_Base, * (Beckhoff Automation GmbH)</Resolution>
+      <Resolution>Tc3_CM_Base, 2.1.22.0 (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc3_Module">
       <Resolution>Tc3_Module, * (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc3_MultiArray">
-      <Resolution>Tc3_MultiArray, * (Beckhoff Automation GmbH)</Resolution>
+      <Resolution>Tc3_MultiArray, 2.0.16.0 (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
   </ItemGroup>
   <ProjectExtensions>
