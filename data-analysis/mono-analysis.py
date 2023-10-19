@@ -40,13 +40,14 @@ def calcFreqPlot(filename, samples, freq):
 
 
 
-calcRMS(getdata('gpiposdiff.csv'), 1000)
-calcSTD(getdata('gpiposdiff.csv'))
+#calcRMS(getdata('gpiposdiff.csv'), 1000)
+#calcSTD(getdata('gpiposdiff.csv'))
 
-calcRMS(getdata('48unplugged.csv'), 1000)
-calcRMS(getdata('gpi-unplugged.csv'), 1000)
-calcRMS(getdata('bothunplugged.csv'), 1000)
-calcRMS(getdata('mirrorunplugged.csv'), 1000)
-calcRMS(getdata('gpi-base-encoder-counts.csv'), 1000/150.)
-calcFreqPlot("gpi-base-encoder-diff", getdata('gpi-base-encoder-counts.csv'), 100)
-calcFreqPlot("mirror-pitch-act-posdiff", getdata('mirror-pitch-act-posdiff.csv'), 500)
+#calcRMS(getdata('48unplugged.csv'), 1000)
+#calcRMS(getdata('gpi-unplugged.csv'), 1000)
+#calcRMS(getdata('bothunplugged.csv'), 1000)
+#calcRMS(getdata('mirrorunplugged.csv'), 1000)
+#calcRMS(getdata('gpi-base-encoder-counts.csv'), 1000/150.)
+#calcFreqPlot("gpi-base-encoder-diff", getdata('gpi-base-encoder-counts.csv'), 100)
+#calcFreqPlot("mirror-pitch-act-posdiff", getdata('mirror-pitch-act-posdiff.csv'), 500)
+calcFreqPlot("mpi-base-encoder-diff", getdata('mpi-rms-error-base.csv'), 100)
