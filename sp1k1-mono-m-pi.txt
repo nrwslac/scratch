@@ -1,0 +1,77 @@
+actual_position: 135999.998703
+encoder_count: 30188678
+actual_position: 134070.141501 hardstop
+encoder_count: 29760370
+actual_position: 135999.881636
+encoder_count: 30188726
+actual_position: 133449.966613 hardstop set A
+encoder_count: 29622651
+actual_position: 135499.99102
+encoder_count: 30077683
+actual_position: 133275.878924 lower hardstop final set point 100 urad/s
+encoder_count: 29583985
+actual_position: 133224.207688 lower hs 50 urad/s
+encoder_count: 29572531
+actual_position: 133224.857679 repeated
+encoder_count: 29572668
+actual_position: 133641.870361 200 urad
+encoder_count: 29665229
+actual_position: 133641.542195
+encoder_count: 29665168
+actual_position: 133570.958607 repeat
+encoder_count: 29649507
+actual_position: 133800.007958 check sticky 
+encoder_count: 29700328
+actual_position: 134850.34779
+encoder_count: 29933477
+actual_position: 133800.002084
+encoder_count: 29700332
+actual_position: 134800.007064
+encoder_count: 29922290
+actual_position: 133229.493566 encoder_count: 29573692 100 urad lower hard
+actual_position: 133225.982696 encoder_count: 29572918 100 urad lower hard repeat stress
+actual_position: 146000.110307 encoder_count: 32408414 start high
+actual_position: 146650.024238 start high               encoder_count: 32552748
+actual_position: 145649.993654 start high               encoder_count: 32330753
+actual_position: 148791.013339 high hardstop hit               encoder_count: 33027975
+actual_position: 145659.997043 start high               encoder_count: 32332964
+actual_position: 144660.001078 start high               encoder_count: 32110986
+actual_position: 146875.988543 high hardstop hit               encoder_count: 32602881
+actual_position: 145584.991275 start high               encoder_count: 32316312
+actual_position: 144000.002844 start high               encoder_count: 31964495
+actual_position: 146744.850997 high hardstop hit               encoder_count: 32573782
+actual_position: 144000.221401 start high               encoder_count: 31964465
+actual_position: 144639.80456 start high               encoder_count: 32106530
+actual_position: 145000.005286 start high               encoder_count: 32186462
+actual_position: 145782.258757 high hardstop hit               encoder_count: 32360090
+actual_position: 144000.012577 start high               encoder_count: 31964482
+actual_position: 145781.628424 high hardstop hit               encoder_count: 32359966
+actual_position: 146639.897598 start high               encoder_count: 32550534
+actual_position: 144999.998905 start high               encoder_count: 32186444
+actual_position: 147803.724143 high hardstop hit               encoder_count: 32808808
+actual_position: 147804.012455 high hardstop hit repeat               encoder_count: 32808884
+actual_position: 147803.010123 high hardstop hit repeat               encoder_count: 32808658
+actual_position: 146499.987933 start high               encoder_count: 32519422
+actual_position: 147910.707649 high hardstop hit               encoder_count: 32832565
+actual_position: 145000.001878 start high               encoder_count: 32186469
+actual_position: 147907.947846 high hardstop hit               encoder_count: 32831948
+actual_position: 145000.005294 start high               encoder_count: 32186463
+actual_position: 147905.582901 high hardstop hit               encoder_count: 32831416
+actual_position: 147906.185272 high hardstop hit repeat               encoder_count: 32831550
+actual_position: 147905.202195 high hardstop hit repeat               encoder_count: 32831336
+actual_position: 147906.030967 high hardstop hit repeat               encoder_count: 32831521
+actual_position: 147903.605062 high hardstop hit               encoder_count: 32830997
+actual_position: 147903.693307 high hardstop hit - upper limit               encoder_count: 32831010
+actual_position: 146499.993819 start high               encoder_count: 32519423
+actual_position: 144999.99645 start high               encoder_count: 32186465
+actual_position: 147430.638959 high hardstop hit               encoder_count: 32725995
+actual_position: 145000.009317 start high               encoder_count: 32186452
+actual_position: 146550.813727 start high               encoder_count: 32530897
+actual_position: 145000.012029 start high               encoder_count: 32186459
+actual_position: 147663.272874 high hardstop hit               encoder_count: 32777642
+actual_position: 147663.68758 high hardstop hit repeat               encoder_count: 32777734
+actual_position: 147663.610446 high hardstop hit repeat               encoder_count: 32777719
+actual_position: 145999.974275 start high               encoder_count: 32408437
+actual_position: 147663.370724 high hardstop hit               encoder_count: 32777664
+actual_position: 146000.000339 start high               encoder_count: 32408433
+actual_position: 147661.740216 high hardstop hit - upper hard final               encoder_count: 32777312
