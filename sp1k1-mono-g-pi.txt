@@ -1,0 +1,24 @@
+actual_position: 153641.640179 test               encoder_count: 23085252
+actual_position: 153641.632457 start test               encoder_count: 23085252
+actual_position: 123502.386758 hit lower limit switch               encoder_count: 18564365
+actual_position: 129999.982423 lower config start               encoder_count: 19539001
+actual_position: 130001.278562 lower config start               encoder_count: 19539201
+actual_position: 129496.90005 lower hard hit               encoder_count: 19463549
+actual_position: 130272.282582 lower config start               encoder_count: 19579832
+actual_position: 131499.982193 lower config start               encoder_count: 19764023
+actual_position: 129982.201377 lower hard hit               encoder_count: 19536332
+actual_position: 130990.400894 lower config start               encoder_count: 19687550
+actual_position: 130199.952385 lower config start               encoder_count: 19569017
+actual_position: 130499.990978 lower config start               encoder_count: 19614002
+actual_position: 130200.062793 lower config start               encoder_count: 19568989
+actual_position: 130999.996297 lower config start               encoder_count: 19689014
+actual_position: 129819.823659 lower hard hit               encoder_count: 19511994
+actual_position: 129819.780136 lower hard hit               encoder_count: 19511974
+actual_position: 129819.987563 lower hard hit               encoder_count: 19512013
+actual_position: 129903.239181 lower hard hit try to back out               encoder_count: 19524482
+actual_position: 129682.179543 lower hard hit try to back out               encoder_count: 19491772
+actual_position: 137232.803327 lower hard hit try to back out               encoder_count: 20623930
+actual_position: 149999.996935                 encoder_count: 22539004
+actual_position: 130999.965113                 encoder_count: 19688994
+actual_position: 131000.387589 this is test               encoder_count: 19689055
+actual_position: 131000.398465 this is test               encoder_count: 19689065

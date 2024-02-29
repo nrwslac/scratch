@@ -1,0 +1,7 @@
+actual_position: -16999.972 start               encoder_count: 14911464
+actual_position: -17704.559 down stream hardstop hit               encoder_count: 14206891
+actual_position: -18499.991 hunting lower               encoder_count: 13411447
+actual_position: -18737.998 hunting lower               encoder_count: 13173449
+actual_position: -18810.611 hit lower limit switch               encoder_count: 13100843
+actual_position: 0.027 hunting upper               encoder_count: 31911489
+actual_position: 1545.183 hit upper limit switch               encoder_count: 33456657
