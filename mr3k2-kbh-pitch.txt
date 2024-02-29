@@ -1,0 +1,20 @@
+actual_position: -490.658432 start               encoder_count: 39897904
+actual_position: -564.088096 hit lower limit switch               encoder_count: 39883848
+actual_position: -171.079172 hit upper limit switch               encoder_count: 39958933
+actual_position: -330.87142 mid start               encoder_count: 39928422
+actual_position: -163.03144 forward switch hit               encoder_count: 39960468
+actual_position: -417.52722 backward hard  hit               encoder_count: 39911862
+actual_position: -330.00748 mid start               encoder_count: 39928573
+actual_position: -450.027072 lower explore               encoder_count: 39905650
+actual_position: -459.294792 backward hard  hit               encoder_count: 39903886
+actual_position: -482.280832 lower explore               encoder_count: 39899488
+actual_position: -678.269548 lower explore               encoder_count: 39862067
+actual_position: -684.599872 backward hard  hit               encoder_count: 39860859
+actual_position: -299.937132 upper explore               encoder_count: 39934281
+actual_position: -288.43364 forward hard  hit               encoder_count: 39936501
+actual_position: -496.292368 back switch hit               encoder_count: 39893349
+actual_position: -684.557984 backward hard  hit               encoder_count: 39860884
+actual_position: -685.657544 backward hard  hit               encoder_count: 39860654
+actual_position: -610.798452 backward switch  hit               encoder_count: 39874938
+actual_position: -685.53188 backward hard  hit               encoder_count: 39860708
+actual_position: -677.646464 backward switch hit               encoder_count: 39862183

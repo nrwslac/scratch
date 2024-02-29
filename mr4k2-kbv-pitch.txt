@@ -1,0 +1,71 @@
+actual_position: 426.539848 start               encoder_count: 50821694
+actual_position: 443.493022 lagged out               encoder_count: 50828294
+actual_position: 603.211255 soft limit               encoder_count: 50890395
+actual_position: 610.145242 forward switch               encoder_count: 50893121
+actual_position: -964.756802 backward switch               encoder_count: 50280519
+actual_position: -1398.227402 explore lower hard               encoder_count: 50111839
+actual_position: 225.952999 start lower               encoder_count: 50743677
+actual_position: 326.003464 test start lower               encoder_count: 50782550
+actual_position: 199.952476 test 200 start lower               encoder_count: 50733558
+actual_position: 149.990233 test start lower               encoder_count: 50714122
+actual_position: 149.974807 explore lower               encoder_count: 50714114
+actual_position: 99.989425 explore lower               encoder_count: 50694684
+actual_position: 300.05179 test start lower               encoder_count: 50772495
+actual_position: 199.921624 test start lower               encoder_count: 50733546
+actual_position: -0.076466 explore lower               encoder_count: 50655754
+actual_position: -96.728069 explore lower               encoder_count: 50618145
+actual_position: 200.032177 test start lower               encoder_count: 50733596
+actual_position: -0.017333 explore lower               encoder_count: 50655759
+actual_position: 199.952476 test start lower               encoder_count: 50733549
+actual_position: 199.967902 test start lower lag monitoring 5               encoder_count: 50733545
+actual_position: 79.683667 hit lower hard               encoder_count: 50686779
+actual_position: 399.940282 explore upper hard               encoder_count: 50811346
+actual_position: 431.375899 hit hard               encoder_count: 50823568
+actual_position: 611.813821 hit hard               encoder_count: 50893731
+actual_position: 400.053406 explore upper hard               encoder_count: 50811392
+actual_position: 700.02226 explore upper hard               encoder_count: 50928060
+actual_position: 610.363777 explore upper hard               encoder_count: 50893159
+actual_position: 400.053406 explore upper hard               encoder_count: 50811385
+actual_position: 637.683223 hit hard upper               encoder_count: 50903785
+actual_position: 399.912001 explore upper hard               encoder_count: 50811390
+actual_position: 655.495111 hit hard upper               encoder_count: 50910562
+actual_position: 651.630898 hit hard upper               encoder_count: 50909221
+actual_position: 400.035409 explore upper hard               encoder_count: 50811406
+actual_position: 661.680937 hit hard upper               encoder_count: 50913180
+actual_position: 657.593047 hit hard upper               encoder_count: 50911569
+actual_position: 656.430955 hit hard upper               encoder_count: 50911126
+actual_position: 637.3927 hit hard upper               encoder_count: 50903795
+actual_position: 400.048264 explore upper hard               encoder_count: 50811381
+actual_position: 666.712384 hit hard upper               encoder_count: 50915099
+actual_position: 400.084258 explore upper hard               encoder_count: 50811377
+actual_position: 648.872215 hit hard upper               encoder_count: 50908084
+actual_position: 399.96085 explore upper hard               encoder_count: 50811355
+actual_position: 623.640421 hit hard upper 3 monitor               encoder_count: 50898362
+actual_position: 380.44696 explore upper hard               encoder_count: 50803765
+actual_position: 627.437788 hit hard upper 3 monitor               encoder_count: 50899842
+actual_position: 485.233207 explore upper hard               encoder_count: 50844528
+actual_position: 616.428766 hit hard upper 3 monitor               encoder_count: 50895478
+actual_position: 400.040551 explore upper hard               encoder_count: 50811395
+actual_position: 637.251295 hit hard upper 3 monitor               encoder_count: 50903720
+actual_position: 400.048264 explore upper hard               encoder_count: 50811387
+actual_position: 618.097345 hit hard upper 3 monitor               encoder_count: 50896256
+actual_position: 597.146266 hit hard upper 3 monitor               encoder_count: 50888059
+actual_position: 571.634233 hit hard upper 3 monitor               encoder_count: 50878115
+actual_position: 611.122222 hit hard upper 3 monitor               encoder_count: 50893514
+actual_position: 609.106558 hit hard upper 3.5 monitor               encoder_count: 50892687
+actual_position: 623.966938 hit hard upper 3 monitor               encoder_count: 50898470
+actual_position: 620.794324 hit hard upper 3.5 monitor               encoder_count: 50897116
+actual_position: 633.890998 hit hard upper 3.5 monitor               encoder_count: 50902066
+actual_position: 650.962438 hit hard upper 3.5 monitor               encoder_count: 50908538
+actual_position: 400.025125 explore lower               encoder_count: 50815947
+actual_position: 418.921975 explore lower               encoder_count: 50815295
+actual_position: 254.935882 hit hard lower 3.5 monitor               encoder_count: 50754930
+actual_position: 235.67395 hit hard lower 3.5 monitor               encoder_count: 50747443
+actual_position: 237.797596 hit hard lower 3.5 monitor               encoder_count: 50748268
+actual_position: 243.59263 hit hard lower 3.5 monitor               encoder_count: 50750548
+actual_position: 243.816307 hit hard lower 3.5 monitor               encoder_count: 50750607
+actual_position: 249.678187 hit hard lower 3.5 monitor 20 urad/s final               encoder_count: 50752892
+actual_position: 424.886695 hit hard high 3.5 monitor 20 urad/s final               encoder_count: 50821031
+actual_position: 434.576794 hit hard high 3.5 monitor 20 urad/s final               encoder_count: 50824823
+actual_position: 454.597171 hit hard high 3.5 monitor 20 urad/s final               encoder_count: 50832597
+actual_position: 528.397726 stop               encoder_count: 50861315
