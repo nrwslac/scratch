@@ -1,0 +1,36 @@
+actual_position: 568.993816 mr4k2 start               encoder_count: 50877082
+actual_position: 426.038503 hit lower stop               encoder_count: 50821512
+actual_position: -979.532339 status               encoder_count: 50275094
+actual_position: -799.996838 status               encoder_count: 50344630
+actual_position: -853.815581 status               encoder_count: 50323692
+actual_position: -999.976931 status               encoder_count: 50266843
+actual_position: -800.032832 status               encoder_count: 50344596
+actual_position: -999.971789 status               encoder_count: 50266837
+actual_position: -800.050829 status               encoder_count: 50344603
+actual_position: -943.929131 status               encoder_count: 50288650
+actual_position: -944.062823 status               encoder_count: 50288596
+actual_position: -943.38665 status               encoder_count: 50288845
+actual_position: 999.95512 status               encoder_count: 51044712
+actual_position: 800.00845 status               encoder_count: 50966963
+actual_position: 831.438925 status               encoder_count: 50979166
+actual_position: 1000.104238 status               encoder_count: 51044431
+actual_position: 899.488153 status               encoder_count: 51005635
+actual_position: 902.416522 status               encoder_count: 51006781
+actual_position: 901.776343 status               encoder_count: 51006523
+actual_position: 901.498675 status               encoder_count: 51006426
+actual_position: 880.084816 status               encoder_count: 50998072
+actual_position: 891.096409 status limit switch               encoder_count: 51002388
+actual_position: 899.953504 status limit switch               encoder_count: 51005821
+actual_position: 898.608871 status limit switch               encoder_count: 51005286
+actual_position: 898.305493 status limit switch               encoder_count: 51005205
+actual_position: 888.016351 status limit switch               encoder_count: 51001189
+actual_position: 884.537788 status limit switch               encoder_count: 50999828
+actual_position: 884.59435 status limit switch               encoder_count: 50999839
+actual_position: 884.596921 status limit switch               encoder_count: 50999844
+actual_position: -900.037019 status limit switch               encoder_count: 50305722
+actual_position: -899.944463 status limit switch               encoder_count: 50305759
+actual_position: -916.882211 status limit switch               encoder_count: 50299152
+actual_position: -916.889924 status limit switch               encoder_count: 50299162
+actual_position: -916.771658 status limit switch               encoder_count: 50299209
+soft low -900
+soft high 875

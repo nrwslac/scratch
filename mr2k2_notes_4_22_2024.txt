@@ -1,0 +1,18 @@
+actual_position: -27.021561 mr2k2 4/22/2024 start               encoder_count: 50401913
+actual_position: 946.196404 hard stop               encoder_count: 50778751
+actual_position: 945.638553 hard stop               encoder_count: 50778527
+actual_position: 945.450019 hard stop               encoder_count: 50778468
+actual_position: 920.106528 limit switch               encoder_count: 50768636
+actual_position: 924.003739 limit switch               encoder_count: 50770149
+actual_position: 924.083801 limit switch               encoder_count: 50770168
+actual_position: 924.099297 set soft 915               encoder_count: 50770151
+actual_position: 17.699513 hard stop?               encoder_count: 50419267
+actual_position: -953.121757 limsw               encoder_count: 50043339
+actual_position: -962.093865 hard stop               encoder_count: 50039868
+actual_position: -961.954402 hard stop               encoder_count: 50039923
+actual_position: -961.838183 hard stop               encoder_count: 50039957
+actual_position: -953.361943 lim switch               encoder_count: 50043237
+actual_position: -925.07682 lim switch               encoder_count: 50054180
+actual_position: -927.553576 lim switch               encoder_count: 50053233
+actual_position: -927.04996 lim switch               encoder_count: 50053419
+actual_position: -927.083535 soft -917               encoder_count: 50053411
