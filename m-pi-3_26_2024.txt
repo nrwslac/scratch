@@ -1,0 +1,4 @@
+actual_position: 133840.975953 start sp1k1 m pi lower soft               encoder_count: 29709448
+actual_position: 134840.006806 start sp1k1 m pi check lower               encoder_count: 29931189
+actual_position: 147463.037314 start sp1k1 m pi check upper               encoder_count: 32733152
+actual_position: 146463.001267 start sp1k1 m pi check upper               encoder_count: 32511216

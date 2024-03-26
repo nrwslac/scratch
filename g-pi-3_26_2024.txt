@@ -1,0 +1,12 @@
+actual_position: 131002.538107 start sp1k1 3_26_2024               encoder_count: 19689383
+actual_position: 129770.572608 start sp1k1 lower               encoder_count: 19504497
+actual_position: 130301.001633 start sp1k1 lower               encoder_count: 19584163
+actual_position: 130999.963107 start sp1k1 lower               encoder_count: 19689007
+actual_position: 131000.006115 start sp1k1 lower               encoder_count: 19689006
+actual_position: 154999.982631 start sp1k1 upper               encoder_count: 23288987
+actual_position: 160229.20298 start sp1k1 upper after lunch               encoder_count: 24073383
+actual_position: 140000.012704 start sp1k1 upper status                encoder_count: 21039018
+actual_position: 160229.990623 start sp1k1 upper status                encoder_count: 24073522
+actual_position: 158827.003174 start sp1k1 upper status                encoder_count: 23863066
+actual_position: 158827.020009 start sp1k1 upper status                encoder_count: 23863053
+actual_position: 158826.830518 start sp1k1 upper soft set 158627                encoder_count: 23863037
