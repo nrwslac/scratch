@@ -1,0 +1,28 @@
+actual_position: -18499.531 mr1k1 start Yup               encoder_count: 13411933
+actual_position: -18846.205 mr1k1 start Yup lower lim               encoder_count: 13065245
+actual_position: -19200.008 mr1k1 status               encoder_count: 12711459
+actual_position: -19399.985 mr1k1 status               encoder_count: 12511448
+actual_position: -19200.007 mr1k1 status               encoder_count: 12711449
+actual_position: -15500.002 mr1k1 status               encoder_count: 16411455
+actual_position: -15450.392 mr1k1 status               encoder_count: 16461065
+actual_position: -15543.249 mr1k1 hard lowe               encoder_count: 16368216
+actual_position: -15534.148 mr1k1 hard lowe               encoder_count: 16377298
+actual_position: -15553.433 mr1k1 hard lowe               encoder_count: 16358015
+actual_position: -15300.0 mr1k1 status               encoder_count: 16611465
+actual_position: -15406.74 mr1k1 lower lim switch               encoder_count: 16504737
+actual_position: -15364.751 mr1k1 lower lim switch               encoder_count: 16546710
+actual_position: -14984.721 mr1k1 lower lim switch               encoder_count: 16926732
+actual_position: -15406.193 mr1k1 lower lim switch               encoder_count: 16505266
+actual_position: -15403.192 mr1k1 lower lim switch               encoder_count: 16508264
+actual_position: -15349.994 mr1k1 lower pre lim switch               encoder_count: 16561459
+actual_position: -15403.436 mr1k1 lower lim switch               encoder_count: 16508006
+actual_position: 2451.434 mr1k1 upper hard               encoder_count: 34362903
+actual_position: 2448.105 mr1k1 upper hard               encoder_count: 34359562
+actual_position: 2445.564 mr1k1 upper hard               encoder_count: 34357013
+actual_position: 2306.189 mr1k1 upper downstream switch               encoder_count: 34217656
+actual_position: 2305.194 mr1k1 upper downstream switch               encoder_count: 34216653
+actual_position: 2305.197 mr1k1 upper downstream switch               encoder_count: 34216669
+actual_position: 2314.203 mr1k1 upper downstream switch               encoder_count: 34225654
+actual_position: 2314.218 mr1k1 upper downstream switch               encoder_count: 34225684
+actual_position: 2314.218 mr1k1 upper downstream switch               encoder_count: 34225684
+actual_position: 2336.107 mr1k1 upper limit switch actual prev wrong               encoder_count: 34247548

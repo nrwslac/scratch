@@ -1,0 +1,14 @@
+actual_position: 2350.677 mr1k1 upper limit setting               encoder_count: 34262117
+actual_position: 2300.0 mr1k1 upper limit setting               encoder_count: 34211446
+actual_position: 2404.888 mr1k1 upper hard limit                encoder_count: 34316354
+actual_position: 2496.361 mr1k1 upper hard limit                encoder_count: 34407815
+actual_position: 2497.263 mr1k1 upper hard limit                encoder_count: 34408720
+actual_position: 2498.13 mr1k1 upper hard limit                encoder_count: 34409621
+actual_position: 2306.204 mr1k1 upper  limit                encoder_count: 34217665
+actual_position: 2314.202 mr1k1 upper  limit                encoder_count: 34225680
+actual_position: -15409.758 mr1k1 lower hard  limit                encoder_count: 16501706
+actual_position: -15412.073 mr1k1 lower hard  limit                encoder_count: 16499382
+actual_position: -15413.491 mr1k1 lower hard  limit                encoder_count: 16497965
+actual_position: -15385.199 mr1k1 lower limit                encoder_count: 16526249
+actual_position: -15389.183 mr1k1 lower limit                encoder_count: 16522335
+actual_position: -15389.206 mr1k1 lower limit                encoder_count: 16522248
