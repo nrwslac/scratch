@@ -1,0 +1,69 @@
+actual_position: 30.95689 mr3k3-x-start               encoder_count: 6191374
+actual_position: 30.02212 mr3k3 x small moves               encoder_count: 6004423
+actual_position: 30.996555 mr3k3 x small moves               encoder_count: 6199314
+actual_position: 41.912285 mr3k3 x hit upper               encoder_count: 8382459
+actual_position: 17.84527 mr3k3 x hit lower               encoder_count: 3569055
+actual_position: 27.325255 mr3k3 y start               encoder_count: 5465051
+actual_position: 27.499025 mr3k3 y small pos               encoder_count: 5499806
+actual_position: 27.19817 mr3k3 y small neg               encoder_count: 5439633
+actual_position: 31.06536 mr3k3 y hit upper               encoder_count: 6213071
+actual_position: 27.041445 mr3k3 y hit lower               encoder_count: 5408290
+actual_position: 86282.442404 mr3k3 pitch start               encoder_count: 48041464
+actual_position: 86296.71342 mr3k3 pitch small pos hit upper               encoder_count: 48049400
+actual_position: 86203.18672 mr3k3 pitch small neg               encoder_count: 47997333
+actual_position: 85989.272344 mr3k3 pitch hit lower               encoder_count: 47878198
+actual_position: 21442.775 mr4k3 X start               encoder_count: 6412294
+actual_position: 21442.413925 mr4k3 X small neg hit lower switch               encoder_count: 6484506
+actual_position: 21446.46074 mr4k3 X small neg hit upper               encoder_count: 5675147
+actual_position: 20.598025 mr4k3 Y start               encoder_count: 4119604
+actual_position: 20.700165 mr4k3 Y small pos               encoder_count: 4140033
+actual_position: 20.50007 mr4k3 Y small neg               encoder_count: 4100014
+actual_position: 18.189095 mr4k3 Y hit lower               encoder_count: 3637817
+actual_position: 42.19492 mr4k3 Y hit upper               encoder_count: 8438980
+actual_position: 29.96763 mr4k3 Y end               encoder_count: 5993527
+actual_position: 128085.722264 mr4k3 Pitch start               encoder_count: 50594759
+actual_position: 128089.952567 mr4k3 Pitch small pos               encoder_count: 50596443
+actual_position: 128080.079327 mr4k3 Pitch small neg               encoder_count: 50592536
+actual_position: 128380.567589 mr4k3 Pitch hit upper               encoder_count: 50711244
+actual_position: 128066.056795 mr4k3 Pitch hit lower               encoder_count: 50587005
+actual_position: 30.97667 mr2l1 x start               encoder_count: 6195334
+actual_position: 31.19412 mr2l1 x small pos               encoder_count: 6238823
+actual_position: 30.021305 mr2l1 x small neg               encoder_count: 6004261
+actual_position: 42.82137 mr2l1 x hit upper               encoder_count: 8564272
+actual_position: 18.66415 mr2l1 x hit lower               encoder_count: 3732830
+actual_position: 29.99822 mr2l1 x end
+               encoder_count: 5999646
+actual_position: 28.98591 mr2l1 y start               encoder_count: 5797181
+actual_position: 28.998105 mr2l1 y small pos               encoder_count: 5799619
+actual_position: 28.69751 mr2l1 y small neg               encoder_count: 5739503
+actual_position: 27.80913 mr2l1 y hit lower               encoder_count: 5561828
+actual_position: 31.85447 mr2l1 y hit upper               encoder_count: 6370896
+actual_position: 30.503305 mr2l1 y end               encoder_count: 6100661
+actual_position: 93312.83232 mr2l1 pitch start               encoder_count: 51955920
+actual_position: 93348.418264 mr2l1 pitch small pos               encoder_count: 51975728
+actual_position: 93291.215664 mr2l1 pitch small neg               encoder_count: 51943902
+actual_position: 93134.376372 mr2l1 pitc hit lower               encoder_count: 51856547
+actual_position: 93437.329244 mr2l1 pitch hit upper               encoder_count: 52025255
+actual_position: 93300.892512 mr2l1 pitch end               encoder_count: 51949270
+actual_position: 93300.867368 mr3l1 x start               encoder_count: 51949263
+actual_position: 31.407565 mr3l1 x start               encoder_count: 6281512
+actual_position: 31.308315 mr3l1 x start               encoder_count: 6261666
+actual_position: 31.589395 mr3l1 x pos small               encoder_count: 6317877
+actual_position: 28.02016 mr3l1 x hit lower
+               encoder_count: 5604034
+actual_position: 32.04302 mr3l1 x hit upper               encoder_count: 6408601
+actual_position: 30.01069 mr3l1 x end               encoder_count: 6002141
+actual_position: 38.799325 mr3l1 y start               encoder_count: 7759863
+actual_position: 38.59891 mr3l1 y small neg               encoder_count: 7719781
+actual_position: 38.79927 mr3l1 y small pos               encoder_count: 7759853
+actual_position: 41.293915 mr3l1 y hit upper               encoder_count: 8258784
+actual_position: 17.209745 mr3l1 y hit lower               encoder_count: 3441949
+actual_position: 34.99829 mr3l1 y end
+               encoder_count: 6999654
+actual_position: 129133.928712 mr3l1 pitch start               encoder_count: 51008825
+actual_position: 129133.898333 mr3l1 pitch start               encoder_count: 51008823
+actual_position: 129125.083302 mr3l1 pitch small neg               encoder_count: 51005327
+actual_position: 129134.966668 mr3l1 pitch small pos               encoder_count: 51009205
+actual_position: 129108.57727 mr3l1 pitch hit lower               encoder_count: 50998794
+actual_position: 129414.68062 mr3l1 pitch hit upper               encoder_count: 51119705
+actual_position: 129200.06423 mr3l1 pitch end               encoder_count: 51034943
