@@ -1,0 +1,221 @@
+Host github
+    HostName github.com
+    ForwardX11 no
+    PreferredAuthentications=publickey
+ 
+Host !github
+    ForwardAgent yes
+    Compression yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    XAuthLocation /opt/X11/bin/xauth
+    PreferredAuthentications=publickey
+ 
+Host pslogin
+    HostName s3dflogin.slac.stanford.edu
+ 
+Host psbuild-rhel7
+    HostName psbuild-rhel7-01
+    ProxyCommand ssh -XT pslogin nc %h %p
+    LocalForward 30011 plv-kfe-pdu-06:80
+
+Host psbuild-rocky9-01
+    HostName psbuild-rocky9-01
+    ProxyCommand ssh -AXT pslogin nc %h %p
+ 
+Host psdev
+    HostName psdev
+    User nrw
+    ProxyCommand ssh -Y pslogin nc %h %p
+    LocalForward 30001 ctl-logsrv01:80
+    LocalForward 30002 pspmpsdb:5000
+ 
+# plcprog-console access
+Host psdev-plc
+    HostName psdev
+    ProxyCommand ssh -Y pslogin nc %h %p
+    LocalForward 3389 plcprog-console:3389
+
+# plcprog-dev access
+Host psdev-plc-dev
+    HostName psdev
+    ProxyCommand ssh -Y pslogin nc %h %p
+    LocalForward 3389 plcprog-dev:3389
+
+# plc-prg-04
+Host psdev-plc-prg
+    HostName psdev
+    ProxyCommand ssh -Y pslogin nc %h %p
+    LocalForward 3390 plc-prg-04:3390
+ 
+# pscron
+Host pscron
+    ProxyCommand ssh -XT pslogin nc %h %p
+ 
+ # Random additional hosts, hopping through psdev:
+Host ctl-crix-cam-01 ctl-kfe-cam-01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ctl-kfe-cam-02 ctl-kfe-misc-01 ctl-kfe-mot-01 ctl-kfe-vac-01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ctl-las-ip1-srv01 ctl-las-ip1-srv02 ctl-las-ip1-srv05 ctl-las-ip1-srv06 ctl-las-ip1-srv07 ctl-las-lhn-01 ctl-las-lhn-04 ctl-las-lln-03 ctl-las-srv01 ctl-las-srv02 ctl-las-srv03
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ctl-lfe-cam-01 ctl-lfe-cam-02 ctl-lfe-misc-01 ctl-lfe-mot-01 ctl-lfe-vac-01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ctl-rix-cam-01 ctl-rix-cam-02 ctl-rix-cam-03 ctl-rix-mot-01 ctl-rix-mpod-fim-01 ctl-rix-vac-01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+ 
+Host ctl-tmo-cam-01 ctl-tmo-fim-01 ctl-tmo-misc-01 ctl-tmo-mot-01 ctl-tmo-vac-01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ctl-tst-01 ctl-tst-pgp01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host cxi-control daq-cxi-pgp04 daq-det-jungfrau daq-det-pgp01 daq-det-pnccd01 daq-det-pnccd02 daq-det-standalone
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host daq-mec-cam01 daq-mec-misc01 daq-mec-pgp02 daq-mfx-pgp01 daq-mfx-pgp02 daq-rix-andor-01 daq-sxr-pgp01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host daq-tmo-andor-01 daq-tst-dev03 daq-tst-dev06 daq-xcs-pgp01 daq-xcs-pgp02 daq-xpp-pgp01 daq-xpp-pgp02
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host drp-ued-cmp001 ioc-amo-gige01 ioc-amo-gige02 ioc-amo-gige03 ioc-amo-lampenc01 ioc-amo-misc01 ioc-amo-mot01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-amo-slits ioc-amo-uniq ioc-amo-vacuum ioc-aux-mon ioc-cxi-cam1 ioc-cxi-cam2 ioc-cxi-cam4
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-cxi-cam5 ioc-cxi-dg1 ioc-cxi-jungfrau01 ioc-cxi-lassrv2 ioc-cxi-misc1 ioc-cxi-mot1 ioc-cxi-protura1
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-cxi-protura2 ioc-cxi-qadc ioc-cxi-rec01 ioc-cxi-rec03 ioc-cxi-rec04 ioc-cxi-sc1 ioc-cxi-sc2
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-cxi-usr1 ioc-cxi-usrmot2 ioc-cxi-vacuum ioc-cxi-wave8 ioc-det-cpci01 ioc-det-pnccd01 ioc-det-pnccd02
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-det-portable1 ioc-det-portable2 ioc-fee-gasdet-daq ioc-fee-kmono-daq ioc-fee-misc1 ioc-fee-nfov ioc-fee-rec01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-fee-rec02 ioc-fee-rec03 ioc-fee-rec04 ioc-fee-srv01 ioc-fee-srv02 ioc-hpl-01 ioc-hpl-02
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-hpl-03 ioc-hpl-04 ioc-hpl-05 ioc-kfe-mpod-gmd-xgmd ioc-las-cxi-srv05 ioc-las-fstiming ioc-las-mec-evr01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-las-mec-evr02 ioc-las-mec-evr03 ioc-las-mec-srv06 ioc-las-rec01 ioc-las-srv01 ioc-las-srv02 ioc-las-srv04
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-las-xcs-srv04 ioc-lfe-gasdet-daq ioc-lfe-kmono-daq ioc-lfe-srv01 ioc-mec-cam04 ioc-mec-evg ioc-mec-evr01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-mec-gige01 ioc-mec-imb02 ioc-mec-ipimb01 ioc-mec-ipmb01 ioc-mec-las-gige01 ioc-mec-las-gige02 ioc-mec-las-gige03
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-mec-las-gige04 ioc-mec-lasmot1 ioc-mec-lpl01 ioc-mec-misc01 ioc-mec-mot3 ioc-mec-opal01 ioc-mec-qadc
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-mec-rec01 ioc-mec-vacuum ioc-mec-wave8 ioc-mfx-cam01 ioc-mfx-cam02 ioc-mfx-hera ioc-mfx-misc01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-mfx-mot1 ioc-mfx-rec01 ioc-mfx-rec02 ioc-mfx-table ioc-mfx-tfs ioc-mfx-usr01 ioc-mfx-vacuum
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-mfx-wave8 ioc-sxd-spec ioc-sxr-acromag ioc-sxr-cam1 ioc-sxr-evr01 ioc-sxr-exp1 ioc-sxr-exp2
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-sxr-gige01 ioc-sxr-gige02 ioc-sxr-gige03 ioc-sxr-gmd ioc-sxr-gmd-acq ioc-sxr-motor ioc-sxr-rec01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-sxr-vacuum ioc-thz-linux1 ioc-tmo-mpod-fim-01 ioc-tmo-mpod-fim-02 ioc-tmo-mpod-portable02 ioc-tmo-mpod01 ioc-tmo-mpod02
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-tst-01 ioc-tst-02 ioc-tst-03 ioc-tst-04 ioc-tst-05 ioc-tst-06 ioc-tst-08
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-tst-12 ioc-tst-13 ioc-tst-evg ioc-tst-fels01 ioc-tst-metrology ioc-tst-mpod-wiener ioc-tst-rec01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-tst-rec02 ioc-tst-rec03 ioc-tst-rec10 ioc-tst-rhel7 ioc-ued-ccd01 ioc-und-rec01 ioc-xcs-gige01
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-xcs-misc1 ioc-xcs-mot1 ioc-xcs-rec01 ioc-xcs-rec02 ioc-xcs-rec03 ioc-xcs-rec04 ioc-xcs-snd
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-xcs-srv01 ioc-xcs-user1 ioc-xcs-user2 ioc-xcs-vacuum ioc-xcs-wave8 ioc-xpp-gige01 ioc-xpp-gige02
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-xpp-gon ioc-xpp-ipimb ioc-xpp-las01 ioc-xpp-mot01 ioc-xpp-osc01 ioc-xpp-rec01 ioc-xpp-rec02
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-xpp-rec03 ioc-xpp-rob01 ioc-xpp-usr01 ioc-xpp-vacuum ioc-xpp-wave8 ioc-xrt-hxx-motvac1 ioc-xrt-mec-mot1
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-xrt-mec-mot2 ioc-xrt-mfxmot1 ioc-xrt-misc01 ioc-xrt-misc02 ioc-xrt-mxtmirror ioc-xrt-rec01 ioc-xrt-rec02
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-xrt-rec03 ioc-xrt-rec04 ioc-xrt-rec05 ioc-xrt-rec06 ioc-xrt-rec07 ioc-xrt-vacuum ioc-xrt-wave8
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ioc-xrt-xcsmisc1 ioc-xrt-xcsmot1 ioc-xrt-xcsmot2 mec-monitor tst-desktop xcs-control xpp-control
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host cxi-console cxi-console-ipmi det-console hpl-console kfe-console las-console lfe-console
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host mcc-console mec-console mec-console-ipmi mfx-console mfx-console-ics mfx-console-ipmi plcprog-console plc-prg-04
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host rix-console rix-console-ipmi tmo-console xcs-console xcs-console-ipmi xtod-console-ics
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host con-ics-xpp-control cxi-control mec-control-ipmi mfx-control mfx-control-ics mfx-control-ipmi
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host rix-control tmo-control tmo-control-ics tmo-control-ipmi ued-control-ipmi xcs-control xcs-control-ipmi
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host xpp-control xpp-control-ics xpp-control-ipmi
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host con-ics-xpp-daq cxi-daq cxi-daq-ipmi ioc-fee-gasdet-daq-fez ioc-lfe-gasdet-daq ioc-lfe-kmono-daq mec-daq
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host mec-daq-fez mec-daq-ics mec-daq-ipmi mfx-daq mfx-daq-fez mfx-daq-ics power-tst-daq
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host rix-daq rix-daq-drp swh-det-b57-daq swh-ued-b44-daq swh-xpp-h3-daq swh-xpp-mezz-daq switch-amo-srvroom-daq
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host switch-cxi-mezz-daq switch-mec-mezz-daq switch-mfx-mezz-daq switch-sxr-srvroom-daq switch-xcs-mezz-daq tmo-daq tmo-daq-ipmi
+    ProxyCommand ssh -XT psdev nc %h %p
+ 
+Host ued-daq xcs-daq xpp-daq xpp-daq-fez xpp-daq-ics xpp-daq-ipmi
+    ProxyCommand ssh -XT psdev nc %h %p
+
+Host pslogin-arch
+    HostName pslogin.slac.stanford.edu
+    # Archiver management interface:
+    # use http://localhost:17665/mgmt/ui/index.html
+    LocalForward 17665 pscaa02:17665
+    # Archiver API:
+    LocalForward 17668 pscaa02:17668
+    # Power monitoring: http://localhost:8089/ion
+    LocalForward 8089 powermon:80
+    # recipe metering: http://localhost:8090/RecipeAnalytics/Operations/Status3
+    LocalForward 8090 recipesrv:80
+
+Host mec-control
+    ProxyCommand ssh -XT psdev nc %h %p
+    # Archiver management interface:
+    # use http://localhost:17665/mgmt/ui/index.html
+    LocalForward 30000 mcn-mec-tch3:80
+    LocalForward 31000 power-xpp-r30-34:80
+    LocalForward 5000 pspmpsdb:5000
+
+
