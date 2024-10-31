@@ -1,0 +1,592 @@
+{
+    "meta": {
+        "type": "db",
+        "canSave": true,
+        "canEdit": true,
+        "canAdmin": true,
+        "canStar": true,
+        "canDelete": true,
+        "slug": "xcs-pem",
+        "url": "/ctl/grafana/d/ddtybk0deohdse/xcs-pem",
+        "expires": "0001-01-01T00:00:00Z",
+        "created": "2024-08-05T16:02:57-07:00",
+        "updated": "2024-10-31T13:52:50-07:00",
+        "updatedBy": "nrw",
+        "createdBy": "nrw",
+        "version": 18,
+        "hasAcl": false,
+        "isFolder": false,
+        "folderId": 1801,
+        "folderUid": "edtyanpm1cf0ga",
+        "folderTitle": "Precision Environment Monitoring",
+        "folderUrl": "/ctl/grafana/dashboards/f/edtyanpm1cf0ga/precision-environment-monitoring",
+        "provisioned": false,
+        "provisionedExternalId": "",
+        "annotationsPermissions": {
+            "dashboard": {
+                "canAdd": true,
+                "canEdit": true,
+                "canDelete": true
+            },
+            "organization": {
+                "canAdd": true,
+                "canEdit": true,
+                "canDelete": true
+            }
+        }
+    },
+    "dashboard": {
+        "annotations": {
+            "list": [
+                {
+                    "builtIn": 1,
+                    "datasource": {
+                        "type": "grafana",
+                        "uid": "-- Grafana --"
+                    },
+                    "enable": true,
+                    "hide": true,
+                    "iconColor": "rgba(0, 211, 255, 1)",
+                    "name": "Annotations \u0026 Alerts",
+                    "type": "dashboard"
+                }
+            ]
+        },
+        "editable": true,
+        "fiscalYearStartMonth": 0,
+        "graphTooltip": 0,
+        "id": 1821,
+        "links": [],
+        "liveNow": false,
+        "panels": [
+            {
+                "datasource": {
+                    "type": "sasaki77-archiverappliance-datasource",
+                    "uid": "000000002"
+                },
+                "fieldConfig": {
+                    "defaults": {
+                        "color": {
+                            "mode": "palette-classic"
+                        },
+                        "custom": {
+                            "axisBorderShow": false,
+                            "axisCenteredZero": false,
+                            "axisColorMode": "text",
+                            "axisLabel": "",
+                            "axisPlacement": "auto",
+                            "barAlignment": 0,
+                            "drawStyle": "line",
+                            "fillOpacity": 0,
+                            "gradientMode": "none",
+                            "hideFrom": {
+                                "legend": false,
+                                "tooltip": false,
+                                "viz": false
+                            },
+                            "insertNulls": false,
+                            "lineInterpolation": "linear",
+                            "lineWidth": 1,
+                            "pointSize": 5,
+                            "scaleDistribution": {
+                                "type": "linear"
+                            },
+                            "showPoints": "auto",
+                            "spanNulls": false,
+                            "stacking": {
+                                "group": "A",
+                                "mode": "none"
+                            },
+                            "thresholdsStyle": {
+                                "mode": "off"
+                            }
+                        },
+                        "mappings": [],
+                        "thresholds": {
+                            "mode": "absolute",
+                            "steps": [
+                                {
+                                    "color": "green",
+                                    "value": null
+                                },
+                                {
+                                    "color": "red",
+                                    "value": 80
+                                }
+                            ]
+                        }
+                    },
+                    "overrides": []
+                },
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": 6,
+                "options": {
+                    "legend": {
+                        "calcs": [],
+                        "displayMode": "list",
+                        "placement": "bottom",
+                        "showLegend": true
+                    },
+                    "tooltip": {
+                        "mode": "single",
+                        "sort": "none"
+                    }
+                },
+                "targets": [
+                    {
+                        "alias": "",
+                        "aliasPattern": "",
+                        "datasource": {
+                            "type": "sasaki77-archiverappliance-datasource",
+                            "uid": "000000002"
+                        },
+                        "functions": [],
+                        "live": false,
+                        "operator": "",
+                        "refId": "A",
+                        "regex": false,
+                        "stream": false,
+                        "strmCap": "",
+                        "strmInt": "",
+                        "target": "XCS:LAS:RTD:1"
+                    }
+                ],
+                "title": "Panel Title",
+                "type": "timeseries"
+            },
+            {
+                "datasource": {
+                    "type": "sasaki77-archiverappliance-datasource",
+                    "uid": "000000002"
+                },
+                "gridPos": {
+                    "h": 2,
+                    "w": 12,
+                    "x": 0,
+                    "y": 8
+                },
+                "id": 5,
+                "options": {
+                    "code": {
+                        "language": "plaintext",
+                        "showLineNumbers": false,
+                        "showMiniMap": false
+                    },
+                    "content": "## ${AREAXCS}",
+                    "mode": "markdown"
+                },
+                "pluginVersion": "11.1.4",
+                "type": "text"
+            },
+            {
+                "datasource": {
+                    "type": "sasaki77-archiverappliance-datasource",
+                    "uid": "000000002"
+                },
+                "description": "This screen displays the installed RTD data.",
+                "fieldConfig": {
+                    "defaults": {
+                        "color": {
+                            "mode": "palette-classic"
+                        },
+                        "custom": {
+                            "axisBorderShow": false,
+                            "axisCenteredZero": false,
+                            "axisColorMode": "text",
+                            "axisLabel": "Temperature (°C)",
+                            "axisPlacement": "auto",
+                            "barAlignment": 0,
+                            "drawStyle": "line",
+                            "fillOpacity": 0,
+                            "gradientMode": "none",
+                            "hideFrom": {
+                                "legend": false,
+                                "tooltip": false,
+                                "viz": false
+                            },
+                            "insertNulls": false,
+                            "lineInterpolation": "linear",
+                            "lineWidth": 1,
+                            "pointSize": 5,
+                            "scaleDistribution": {
+                                "type": "linear"
+                            },
+                            "showPoints": "auto",
+                            "spanNulls": false,
+                            "stacking": {
+                                "group": "A",
+                                "mode": "none"
+                            },
+                            "thresholdsStyle": {
+                                "mode": "off"
+                            }
+                        },
+                        "decimals": 2,
+                        "links": [
+                            {
+                                "title": "xrt-racks",
+                                "url": "https://pswww.slac.stanford.edu/ctl/grafana/d/fdhnjujdheghsc/xrt-racks?orgId=1"
+                            }
+                        ],
+                        "mappings": [],
+                        "thresholds": {
+                            "mode": "absolute",
+                            "steps": [
+                                {
+                                    "color": "green",
+                                    "value": null
+                                },
+                                {
+                                    "color": "red",
+                                    "value": 80
+                                }
+                            ]
+                        },
+                        "unit": "celsius"
+                    },
+                    "overrides": []
+                },
+                "gridPos": {
+                    "h": 10,
+                    "w": 24,
+                    "x": 0,
+                    "y": 10
+                },
+                "id": 4,
+                "options": {
+                    "legend": {
+                        "calcs": [],
+                        "displayMode": "list",
+                        "placement": "bottom",
+                        "showLegend": true
+                    },
+                    "tooltip": {
+                        "maxHeight": 600,
+                        "mode": "single",
+                        "sort": "none"
+                    }
+                },
+                "targets": [
+                    {
+                        "alias": "",
+                        "aliasPattern": "",
+                        "datasource": {
+                            "type": "sasaki77-archiverappliance-datasource",
+                            "uid": "000000002"
+                        },
+                        "functions": [],
+                        "live": false,
+                        "operator": "",
+                        "refId": "A",
+                        "regex": false,
+                        "stream": false,
+                        "strmCap": "",
+                        "strmInt": "",
+                        "target": "${RTD1}"
+                    },
+                    {
+                        "alias": "",
+                        "aliasPattern": "",
+                        "datasource": {
+                            "type": "sasaki77-archiverappliance-datasource",
+                            "uid": "000000002"
+                        },
+                        "functions": [],
+                        "hide": false,
+                        "live": false,
+                        "operator": "",
+                        "refId": "B",
+                        "regex": false,
+                        "stream": false,
+                        "strmCap": "",
+                        "strmInt": "",
+                        "target": "${RTD2}"
+                    },
+                    {
+                        "alias": "",
+                        "aliasPattern": "",
+                        "datasource": {
+                            "type": "sasaki77-archiverappliance-datasource",
+                            "uid": "000000002"
+                        },
+                        "functions": [],
+                        "hide": false,
+                        "live": false,
+                        "operator": "",
+                        "refId": "C",
+                        "regex": false,
+                        "stream": false,
+                        "strmCap": "",
+                        "strmInt": "",
+                        "target": "${RTD3}"
+                    },
+                    {
+                        "alias": "",
+                        "aliasPattern": "",
+                        "datasource": {
+                            "type": "sasaki77-archiverappliance-datasource",
+                            "uid": "000000002"
+                        },
+                        "functions": [],
+                        "hide": false,
+                        "live": false,
+                        "operator": "",
+                        "refId": "D",
+                        "regex": false,
+                        "stream": false,
+                        "strmCap": "",
+                        "strmInt": "",
+                        "target": "${RTD4}"
+                    },
+                    {
+                        "alias": "",
+                        "aliasPattern": "",
+                        "datasource": {
+                            "type": "sasaki77-archiverappliance-datasource",
+                            "uid": "000000002"
+                        },
+                        "functions": [],
+                        "hide": false,
+                        "live": false,
+                        "operator": "",
+                        "refId": "E",
+                        "regex": false,
+                        "stream": false,
+                        "strmCap": "",
+                        "strmInt": "",
+                        "target": "${RTD5}"
+                    },
+                    {
+                        "alias": "",
+                        "aliasPattern": "",
+                        "datasource": {
+                            "type": "sasaki77-archiverappliance-datasource",
+                            "uid": "000000002"
+                        },
+                        "functions": [],
+                        "hide": false,
+                        "live": false,
+                        "operator": "",
+                        "refId": "F",
+                        "regex": false,
+                        "stream": false,
+                        "strmCap": "",
+                        "strmInt": "",
+                        "target": "${RTD6}"
+                    }
+                ],
+                "title": "XCS XRT Beamline Component Temperature",
+                "type": "timeseries"
+            }
+        ],
+        "refresh": "",
+        "schemaVersion": 39,
+        "tags": [],
+        "templating": {
+            "list": [
+                {
+                    "current": {
+                        "selected": false,
+                        "text": "XCS",
+                        "value": "XCS"
+                    },
+                    "hide": 2,
+                    "name": "AREAXCS",
+                    "options": [
+                        {
+                            "selected": true,
+                            "text": "XCS",
+                            "value": "XCS"
+                        }
+                    ],
+                    "query": "XCS XRT BEAMLINE",
+                    "skipUrlSync": false,
+                    "type": "textbox"
+                },
+                {
+                    "current": {
+                        "isNone": true,
+                        "selected": false,
+                        "text": "None",
+                        "value": ""
+                    },
+                    "datasource": {
+                        "type": "sasaki77-archiverappliance-datasource",
+                        "uid": "000000002"
+                    },
+                    "definition": "XCS:PBT:CAM:03:RTD",
+                    "hide": 2,
+                    "includeAll": false,
+                    "multi": false,
+                    "name": "RTD1",
+                    "options": [],
+                    "query": "XCS:PBT:CAM:03:RTD",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 0,
+                    "type": "query"
+                },
+                {
+                    "current": {
+                        "isNone": true,
+                        "selected": false,
+                        "text": "None",
+                        "value": ""
+                    },
+                    "datasource": {
+                        "type": "sasaki77-archiverappliance-datasource",
+                        "uid": "000000002"
+                    },
+                    "definition": "XCS:HFX:MONO:RTD",
+                    "hide": 2,
+                    "includeAll": false,
+                    "multi": false,
+                    "name": "RTD2",
+                    "options": [],
+                    "query": "XCS:HFX:MONO:RTD",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 0,
+                    "type": "query"
+                },
+                {
+                    "current": {
+                        "isNone": true,
+                        "selected": false,
+                        "text": "None",
+                        "value": ""
+                    },
+                    "datasource": {
+                        "type": "sasaki77-archiverappliance-datasource",
+                        "uid": "000000002"
+                    },
+                    "definition": "XCS:CCM:RTD",
+                    "hide": 2,
+                    "includeAll": false,
+                    "multi": false,
+                    "name": "RTD3",
+                    "options": [],
+                    "query": "XCS:CCM:RTD",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 0,
+                    "type": "query"
+                },
+                {
+                    "current": {
+                        "isNone": true,
+                        "selected": false,
+                        "text": "None",
+                        "value": ""
+                    },
+                    "datasource": {
+                        "type": "sasaki77-archiverappliance-datasource",
+                        "uid": "000000002"
+                    },
+                    "definition": "XCS:MR1L3:RTD",
+                    "hide": 2,
+                    "includeAll": false,
+                    "multi": false,
+                    "name": "RTD4",
+                    "options": [],
+                    "query": "XCS:MR1L3:RTD",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 0,
+                    "type": "query"
+                },
+                {
+                    "current": {
+                        "isNone": true,
+                        "selected": false,
+                        "text": "None",
+                        "value": ""
+                    },
+                    "datasource": {
+                        "type": "sasaki77-archiverappliance-datasource",
+                        "uid": "000000002"
+                    },
+                    "definition": "XCS:DG1:RTD",
+                    "hide": 2,
+                    "includeAll": false,
+                    "multi": false,
+                    "name": "RTD5",
+                    "options": [],
+                    "query": "XCS:DG1:RTD",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 0,
+                    "type": "query"
+                },
+                {
+                    "current": {
+                        "isNone": true,
+                        "selected": false,
+                        "text": "None",
+                        "value": ""
+                    },
+                    "datasource": {
+                        "type": "sasaki77-archiverappliance-datasource",
+                        "uid": "000000002"
+                    },
+                    "definition": "XCS:ALC:1:RTD",
+                    "hide": 2,
+                    "includeAll": false,
+                    "multi": false,
+                    "name": "RTD6",
+                    "options": [],
+                    "query": "XCS:ALC:1:RTD",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 0,
+                    "type": "query"
+                },
+                {
+                    "current": {
+                        "isNone": true,
+                        "selected": false,
+                        "text": "None",
+                        "value": ""
+                    },
+                    "datasource": {
+                        "type": "sasaki77-archiverappliance-datasource",
+                        "uid": "000000002"
+                    },
+                    "definition": "XCS:ALC:2:RTD",
+                    "hide": 2,
+                    "includeAll": false,
+                    "multi": false,
+                    "name": "RTD7",
+                    "options": [],
+                    "query": "XCS:ALC:2:RTD",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 0,
+                    "type": "query"
+                }
+            ]
+        },
+        "time": {
+            "from": "now-6h",
+            "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "",
+        "title": "XCS PEM",
+        "uid": "ddtybk0deohdse",
+        "version": 18,
+        "weekStart": ""
+    }
+}
