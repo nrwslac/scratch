@@ -1,23 +1,32 @@
 {
-    "id": 39,
-    "uid": "Fyrny837k",
-    "orgID": 1,
-    "folderUID": "CNn2L6mGz",
-    "ruleGroup": "Temperature of MFX R45 alert",
-    "title": "Temperature of MFX R45 alert",
+    "annotations": {
+        "__alertId__": "223",
+        "__dashboardUid__": "RYNDFOrGk",
+        "__panelId__": "6",
+        "message": "Temperature is above 33C in R45, please check!"
+    },
     "condition": "B",
     "data": [
         {
-            "refId": "A",
-            "queryType": "",
-            "relativeTimeRange": {
-                "from": 300,
-                "to": 0
-            },
             "datasourceUid": "000000002",
             "model": {
                 "alias": "(R45:PWR11:S1)",
                 "aliasPattern": "",
+                "conditions": [
+                    {
+                        "params": [],
+                        "type": ""
+                    },
+                    {
+                        "type": ""
+                    },
+                    {
+                        "params": []
+                    },
+                    {
+                        "type": ""
+                    }
+                ],
                 "datasource": {
                     "type": "sasaki77-archiverappliance-datasource",
                     "uid": "000000002"
@@ -31,18 +40,21 @@
                 "stream": true,
                 "strmCap": "",
                 "strmInt": "",
-                "target": "MFX:R45:PWR:11:Sensor:1:GetTempValue"
+                "target": "MFX:R45:PWR:11:Sensor:1:GetTempValue",
+                "type": ""
+            },
+            "queryType": "",
+            "refId": "A",
+            "relativeTimeRange": {
+                "from": 300,
+                "to": 0
             }
         },
         {
-            "refId": "B",
-            "queryType": "",
-            "relativeTimeRange": {
-                "from": 0,
-                "to": 0
-            },
             "datasourceUid": "-100",
             "model": {
+                "alias": "",
+                "aliasPattern": "",
                 "conditions": [
                     {
                         "evaluator": {
@@ -64,28 +76,43 @@
                         }
                     }
                 ],
+                "datasource": {},
+                "functions": [],
                 "intervalMs": 1000,
                 "maxDataPoints": 43200,
+                "operator": "",
                 "refId": "B",
+                "regex": false,
+                "stream": false,
+                "strmCap": "",
+                "strmInt": "",
+                "target": "",
                 "type": "classic_conditions"
+            },
+            "queryType": "",
+            "refId": "B",
+            "relativeTimeRange": {
+                "from": 0,
+                "to": 0
             }
         }
     ],
-    "updated": "2023-08-11T09:42:37-07:00",
-    "noDataState": "NoData",
     "execErrState": "Alerting",
+    "folderUID": "CNn2L6mGz",
     "for": "1d",
-    "annotations": {
-        "__alertId__": "223",
-        "__dashboardUid__": "RYNDFOrGk",
-        "__panelId__": "6",
-        "message": "Temperature is above 33C in R45, please check!"
-    },
+    "id": 39,
+    "isPaused": false,
     "labels": {
         "alertname": "Temperature of MFX R45 alert",
         "notif_destination": "mfx_slack_grafana_alerts"
     },
-    "isPaused": false,
+    "noDataState": "NoData",
     "notification_settings": null,
-    "record": null
+    "orgID": 1,
+    "provenance": null,
+    "record": null,
+    "ruleGroup": "Temperature of MFX R45 alert",
+    "title": "Temperature of MFX R45 alert",
+    "uid": "Fyrny837k",
+    "updated": "2023-08-11T09:42:37-07:00"
 }
