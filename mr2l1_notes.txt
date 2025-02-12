@@ -1,0 +1,210 @@
+actual_position: 30.711085 mr2l1 start               encoder_count: 6142217
+actual_position1: 29.885425 mr2l1 start               encoder_count: 5977082
+actual_position2: 93284.586628 mr2l1 start               encoder_count: 51940176
+X: 30.71108 mr2l1 start               encoder_count: 6142216
+Y: 29.88542 mr2l1 start               encoder_count: 5977082
+Pitch: 93284.559688 mr2l1 start               encoder_count: 51940175
+X: 30.71108 mr2l1 small moves               encoder_count: 6142217
+Y: 29.88698 mr2l1 small moves               encoder_count: 5977393
+Pitch: 93284.530952 mr2l1 small moves               encoder_count: 51940170
+X: 30.711105 mr2l1 small moves               encoder_count: 6142218
+Y: 30.089145 mr2l1 small moves               encoder_count: 6017830
+Pitch: 93284.516584 mr2l1 small moves               encoder_count: 51940158
+X: 30.711105 mr2l1 Y positive small moves               encoder_count: 6142220
+Y: 30.089135 mr2l1 Y positive small moves               encoder_count: 6017829
+Pitch: 93284.51838 mr2l1 Y positive small moves               encoder_count: 51940155
+X: 30.711075 mr2l1 Y neg small moves               encoder_count: 6142216
+Y: 29.691765 mr2l1 Y neg small moves               encoder_count: 5938351
+Pitch: 93284.520176 mr2l1 Y neg small moves               encoder_count: 51940152
+X: 30.71116 mr2l1 hit high limit               encoder_count: 6142230
+Y: 31.85147 mr2l1 hit high limit               encoder_count: 6370297
+Pitch: 93284.520176 mr2l1 hit high limit               encoder_count: 51940146
+X: 30.71102 mr2l1 y hit low limit               encoder_count: 6142205
+Y: 27.80307 mr2l1 y hit low limit               encoder_count: 5560611
+Pitch: 93284.469888 mr2l1 y hit low limit               encoder_count: 51940128
+X: 30.71109 mr2l1 y end               encoder_count: 6142216
+Y: 30.00264 mr2l1 y end               encoder_count: 6000529
+Pitch: 93284.504012 mr2l1 y end               encoder_count: 51940144
+X: 30.89273 mr2l1 x small               encoder_count: 6178548
+Y: 30.002335 mr2l1 x small               encoder_count: 6000468
+Pitch: 93284.417804 mr2l1 x small               encoder_count: 51940103
+X: 30.54879 mr2l1 x small neg               encoder_count: 6109755
+Y: 30.00276 mr2l1 x small neg               encoder_count: 6000552
+Pitch: 93284.56328 mr2l1 x small neg               encoder_count: 51940178
+X: 33.002255 mr2l1 x small neg               encoder_count: 6600450
+Y: 30.002775 mr2l1 x small neg               encoder_count: 6000555
+Pitch: 93283.697608 mr2l1 x small neg               encoder_count: 51939692
+X: 42.82042 mr2l1 x hit high               encoder_count: 8564084
+Y: 30.01389 mr2l1 x hit high               encoder_count: 6002777
+Pitch: 93286.824444 mr2l1 x hit high               encoder_count: 51941434
+X: 18.6635 mr2l1 x hit low               encoder_count: 3732697
+Y: 29.998985 mr2l1 x hit low               encoder_count: 5999798
+Pitch: 93285.035628 mr2l1 x hit low               encoder_count: 51940446
+X: 23.80066 mr2l1 pitch start               encoder_count: 4759277
+Y: 29.99991 mr2l1 pitch start               encoder_count: 5999996
+Pitch: 93286.163516 mr2l1 pitch start               encoder_count: 51941075
+X: 30.00703 mr2l1 pitch small pos               encoder_count: 6001405
+Y: 30.002045 mr2l1 pitch small pos               encoder_count: 6000405
+Pitch: 93295.048328 mr2l1 pitch small pos               encoder_count: 51946025
+X: 30.00707 mr2l1 pitch small neg               encoder_count: 6001414
+Y: 30.00206 mr2l1 pitch small neg               encoder_count: 6000411
+Pitch: 93276.969792 mr2l1 pitch small neg               encoder_count: 51935953
+X: 30.00709 mr2l1 pitch hit high
+               encoder_count: 6001415
+Y: 30.00198 mr2l1 pitch hit high
+               encoder_count: 6000400
+Pitch: 93436.804812 mr2l1 pitch hit high
+               encoder_count: 52024954
+X: 30.007095 mr2l1 pitch hit low               encoder_count: 6001417
+Y: 30.00211 mr2l1 pitch hit low               encoder_count: 6000422
+Pitch: 93136.982368 mr2l1 pitch hit low               encoder_count: 51858001
+X: 30.00709 mr2l1 end               encoder_count: 6001417
+Y: 30.002045 mr2l1 end               encoder_count: 6000412
+Pitch: 93299.294072 mr2l1 end               encoder_count: 51948367
+X: 30.0015 mr3l1 start               encoder_count: 6000299
+Y: 29.31324 mr3l1 start               encoder_count: 5862645
+Pitch: 129262.992212 mr3l1 start               encoder_count: 51059810
+X: 30.08434 mr3l1 small x positive               encoder_count: 6016869
+Y: 29.312725 mr3l1 small x positive               encoder_count: 5862545
+Pitch: 129263.075754 mr3l1 small x positive               encoder_count: 51059814
+X: 29.88911 mr3l1 small x neg               encoder_count: 5977821
+Y: 29.31335 mr3l1 small x neg               encoder_count: 5862671
+Pitch: 129262.964364 mr3l1 small x neg               encoder_count: 51059780
+X: 32.043145 mr3l1 small x hit high               encoder_count: 6408633
+Y: 29.31214 mr3l1 small x hit high               encoder_count: 5862428
+Pitch: 129263.065628 mr3l1 small x hit high               encoder_count: 51059830
+X: 28.026355 mr3l1 small x hit low               encoder_count: 5605266
+Y: 29.31433 mr3l1 small x hit low               encoder_count: 5862868
+Pitch: 129262.944111 mr3l1 small x hit low               encoder_count: 51059783
+X: 29.982405 mr3l1 start y               encoder_count: 5996480
+Y: 29.312735 mr3l1 start y               encoder_count: 5862551
+Pitch: 129263.093476 mr3l1 start y               encoder_count: 51059838
+X: 29.982565 mr3l1 y small pos               encoder_count: 5996512
+Y: 29.41211 mr3l1 y small pos               encoder_count: 5882424
+Pitch: 129263.073223 mr3l1 y small pos               encoder_count: 51059828
+X: 29.982605 mr3l1 y small neg               encoder_count: 5996519
+Y: 29.20907 mr3l1 y small neg               encoder_count: 5841817
+Pitch: 129263.058033 mr3l1 y small neg               encoder_count: 51059840
+X: 29.98162 mr3l1 y hit hight               encoder_count: 5996328
+Y: 41.30289 mr3l1 y hit hight               encoder_count: 8260576
+Pitch: 129262.951706 mr3l1 y hit hight               encoder_count: 51059776
+X: 29.98464 mr3l1 y hit low               encoder_count: 5996929
+Y: 17.20665 mr3l1 y hit low               encoder_count: 3441334
+Pitch: 129263.020059 mr3l1 y hit low               encoder_count: 51059807
+X: 29.98361 mr3l1 pitch start               encoder_count: 5996733
+Y: 25.004335 mr3l1 pitch start               encoder_count: 4960794
+Pitch: 129262.94158 mr3l1 pitch start               encoder_count: 51059762
+X: 29.982945 mr3l1 pitch small pos               encoder_count: 5996591
+Y: 30.001285 mr3l1 pitch small pos               encoder_count: 6000256
+Pitch: 129272.86292 mr3l1 pitch small pos               encoder_count: 51063724
+X: 29.982945 mr3l1 pitch small neg               encoder_count: 5996587
+Y: 30.00118 mr3l1 pitch small neg               encoder_count: 6000239
+Pitch: 129253.11644 mr3l1 pitch small neg               encoder_count: 51055883
+X: 29.98296 mr3l1 pitch hit high               encoder_count: 5996593
+Y: 30.00118 mr3l1 pitch hit high               encoder_count: 6000237
+Pitch: 129401.696044 mr3l1 pitch hit high               encoder_count: 51114593
+X: 29.98296 mr3l1 pitch hit low               encoder_count: 5996592
+Y: 30.001065 mr3l1 pitch hit low               encoder_count: 6000213
+Pitch: 129109.820285 mr3l1 pitch hit low               encoder_count: 50999306
+X: 29.982955 mr3l1 end               encoder_count: 5996597
+Y: 30.00108 mr3l1 end               encoder_count: 6000216
+Pitch: 129249.908903 mr3l1 end               encoder_count: 51054645
+X: 21444.424625 mr4k3 start               encoder_count: 6082368
+Y: 30.31986 mr4k3 start               encoder_count: 6063970
+Pitch: 128208.907388 mr4k3 start               encoder_count: 50643428
+X: 21444.51367 mr4k3 x small pos               encoder_count: 6064563
+Y: 30.320055 mr4k3 x small pos               encoder_count: 6064008
+Pitch: 128208.975741 mr4k3 x small pos               encoder_count: 50643438
+X: 21444.33166 mr4k3 x small neg               encoder_count: 6100961
+Y: 30.319605 mr4k3 x small neg               encoder_count: 6063922
+Pitch: 128208.874477 mr4k3 x small neg               encoder_count: 50643411
+X: 21446.459065 mr4k3 x hit hight               encoder_count: 5675483
+Y: 30.318305 mr4k3 x hit hight               encoder_count: 6063663
+Pitch: 128208.960552 mr4k3 x hit hight               encoder_count: 50643442
+X: 21442.41251 mr4k3 x hit low               encoder_count: 6484792
+Y: 30.3213 mr4k3 x hit low               encoder_count: 6064258
+Pitch: 128208.84663 mr4k3 x hit low               encoder_count: 50643392
+X: 21443.990085 mr4k3 y start               encoder_count: 6169281
+Y: 30.32057 mr4k3 y start               encoder_count: 6064116
+Pitch: 128208.960552 mr4k3 y start               encoder_count: 50643451
+X: 21443.990275 mr4k3 y small pos               encoder_count: 6169240
+Y: 30.422105 mr4k3 y small pos               encoder_count: 6084419
+Pitch: 128208.947894 mr4k3 y small pos               encoder_count: 50643458
+X: 21443.99038 mr4k3 y small neg               encoder_count: 6169221
+Y: 30.225825 mr4k3 y small neg               encoder_count: 6045169
+Pitch: 128208.912451 mr4k3 y small neg               encoder_count: 50643420
+X: 21443.98997 mr4k3 y hit high               encoder_count: 6169301
+Y: 42.19054 mr4k3 y hit high               encoder_count: 8438108
+Pitch: 128208.871946 mr4k3 y hit high               encoder_count: 50643409
+X: 21443.991175 mr4k3 y hit low               encoder_count: 6169058
+Y: 18.17157 mr4k3 y hit low               encoder_count: 3634314
+Pitch: 128208.844098 mr4k3 y hit low               encoder_count: 50643416
+X: 21443.990515 mr4k3 y end               encoder_count: 6169190
+Y: 32.00371 mr4k3 y end               encoder_count: 6400741
+Pitch: 128208.866882 mr4k3 y end               encoder_count: 50643410
+X: 21443.990525 mr4k3 pitch small pos               encoder_count: 6169188
+Y: 32.00368 mr4k3 pitch small pos               encoder_count: 6400737
+Pitch: 128218.811007 mr4k3 pitch small pos               encoder_count: 50647334
+X: 21443.990535 mr4k3 pitch small neg               encoder_count: 6169189
+Y: 32.003675 mr4k3 pitch small neg               encoder_count: 6400737
+Pitch: 128198.927821 mr4k3 pitch small neg               encoder_count: 50639500
+X: 21443.99054 mr4k3 pitch high hit               encoder_count: 6169188
+Y: 32.003635 mr4k3 pitch high hit               encoder_count: 6400727
+Pitch: 128358.70216 mr4k3 pitch high hit               encoder_count: 50702605
+X: 21443.990535 mr4k3 pitch high low               encoder_count: 6169184
+Y: 32.003615 mr4k3 pitch high low               encoder_count: 6400721
+Pitch: 128076.87179 mr4k3 pitch high low               encoder_count: 50591269
+X: 21443.99055 mr4k3 pitch hit low               encoder_count: 6169187
+Y: 32.003595 mr4k3 pitch hit low               encoder_count: 6400722
+Pitch: 128076.851537 mr4k3 pitch hit low               encoder_count: 50591269
+X: 21443.99055 mr4k3 pitch end               encoder_count: 6169186
+Y: 32.00357 mr4k3 pitch end               encoder_count: 6400717
+Pitch: 128199.958182 mr4k3 pitch end               encoder_count: 50639887
+X: 21443.99058 mr4k3 y hit low               encoder_count: 6169183
+Y: 32.003555 mr4k3 y hit low               encoder_count: 6400712
+Pitch: 128199.948056 mr4k3 y hit low               encoder_count: 50639898
+X: 29.89308 mr3k3 start               encoder_count: 5978616
+Y: 29.200235 mr3k3 start               encoder_count: 5840048
+Pitch: 86144.814924 mr3k3 start               encoder_count: 47964825
+X: 30.076005 mr3k3 x small pos               encoder_count: 6015203
+Y: 29.20067 mr3k3 x small pos               encoder_count: 5840131
+Pitch: 86144.746676 mr3k3 x small pos               encoder_count: 47964785
+X: 29.68996 mr3k3 x small neg               encoder_count: 5937992
+Y: 29.20009 mr3k3 x small neg               encoder_count: 5840020
+Pitch: 86144.863416 mr3k3 x small neg               encoder_count: 47964845
+X: 41.90848 mr3k3 x hit pos
+               encoder_count: 8381696
+Y: 29.19639 mr3k3 x hit pos
+               encoder_count: 5839276
+Pitch: 86144.7808 mr3k3 x hit pos
+               encoder_count: 47964803
+X: 17.84835 mr3k3 x hit low               encoder_count: 3569669
+Y: 29.214055 mr3k3 x hit low               encoder_count: 5842809
+Pitch: 86147.426308 mr3k3 x hit low               encoder_count: 47966290
+X: 23.95682 mr3k3 y small pos               encoder_count: 4765778
+Y: 29.424825 mr3k3 y small pos               encoder_count: 5885021
+Pitch: 86146.564228 mr3k3 y small pos               encoder_count: 47965889
+X: 28.08835 mr3k3 y small neg               encoder_count: 5605261
+Y: 29.04213 mr3k3 y small neg               encoder_count: 5808349
+Pitch: 86145.623124 mr3k3 y small neg               encoder_count: 47965229
+X: 29.97362 mr3k3 y hith pos               encoder_count: 5994724
+Y: 31.04521 mr3k3 y hith pos               encoder_count: 6209041
+Pitch: 86144.667652 mr3k3 y hith pos               encoder_count: 47964732
+X: 29.97327 mr3k3 y hit low               encoder_count: 5994657
+Y: 27.02633 mr3k3 y hit low               encoder_count: 5405262
+Pitch: 86145.404012 mr3k3 y hit low               encoder_count: 47965126
+X: 29.973605 mr3k3 pitch small pos               encoder_count: 5994720
+Y: 29.007965 mr3k3 pitch small pos               encoder_count: 5801594
+Pitch: 86154.328336 mr3k3 pitch small pos               encoder_count: 47970101
+X: 29.97361 mr3k3 pitch small neg               encoder_count: 5994719
+Y: 29.007965 mr3k3 pitch small neg               encoder_count: 5801591
+Pitch: 86136.688024 mr3k3 pitch small neg               encoder_count: 47960302
+X: 29.97366 mr3k3 pitch hit pos               encoder_count: 5994729
+Y: 29.008115 mr3k3 pitch hit pos               encoder_count: 5801623
+Pitch: 86292.113864 mr3k3 pitch hit pos               encoder_count: 48046844
+X: 29.97375 mr3k3 pitch hit lowe               encoder_count: 5994751
+Y: 29.007865 mr3k3 pitch hit lowe               encoder_count: 5801574
+Pitch: 85999.85258 mr3k3 pitch hit lowe               encoder_count: 47884100
+X: 29.97377 mr3k3 end               encoder_count: 5994754
+Y: 29.00795 mr3k3 end               encoder_count: 5801588
+Pitch: 86101.427156 mr3k3 end               encoder_count: 47940645
